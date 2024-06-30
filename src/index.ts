@@ -6,7 +6,9 @@ dotenv.config();
 const app = express();
 app.use(cors());
 const PORT = process.env.PORT;
-
+app.get("/" , (req:Request , res:Response)=>{
+  res.json({msg:"Hi There"})
+})
 app.get("/report", pdf_controller);
 app
   .listen(PORT, () => {
