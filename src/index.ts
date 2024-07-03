@@ -7,11 +7,11 @@ dotenv.config();
 const app = express();
 app.use(cors());
 const PORT = process.env.PORT;
-app.get("/" , (req:Request , res:Response)=>{
-  res.json({msg:"Hi There"})
-})
+app.get("/", (req: Request, res: Response) => {
+  res.json({ msg: "Changes Made for API" });
+});
 app.get("/report", pdf_controller);
-app.post("/get_data" ,user_data_controller )
+app.post("/get_data", user_data_controller);
 app
   .listen(PORT, () => {
     console.log("Server running at PORT: ", PORT);
